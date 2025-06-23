@@ -1,0 +1,19 @@
+name: Node.js Greeting Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Greet from GitHub Actions
+        run: echo "Hello from @elitelaksh7"
